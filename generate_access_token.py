@@ -7,7 +7,7 @@ d_client_secret = 'your client secret value'
 d_grant_type = 'client_credential' # Default, no need to change
 d_expiration = 5 # integer, measured in minutes, requests sent without the expiration key (or invalid types) default to 120.
 
-def generate_access_token(client_id={d_client_id}, client_secret={d_client_secret}, grant_type={d_grant_type}, expiration={d_expiration}):
+def generate_access_token(client_id=d_client_id, client_secret=d_client_secret, grant_type=d_grant_type, expiration=d_expiration):
     url = "https://www.arcgis.com/sharing/rest/oauth2/token"
     payload = f'client_id={client_id}&client_secret={client_secret}&grant_type=client_credentials&expiration=10'
     headers = {'Content-Type': 'application/x-www-form-urlencoded'}
